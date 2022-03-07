@@ -5,11 +5,11 @@ from time import sleep
 import serial
 import pywt
 
-# outSerial = serial.Serial(
-#     "COM3",
-#     115200,
-#     timeout=0.05
-# )
+outSerial = serial.Serial(
+    "COM3",
+    115200,
+    timeout=0.05
+)
 
 first_column = [[sg.Image(filename="", key="-IMAGE0-", size=(400, 400))],
                 [sg.Button("Capture 0")],
@@ -103,11 +103,9 @@ def main():
         window["-IMAGE0-"].update(data=imgbytes0)
         sleep(0.1)
 
-        # ret, img1 = cam1.read()
-        # imgbytes1 = cv2.imencode(".png", img1)[1].tobytes()
-        # window["-IMAGE1-"].update(data=imgbytes1)
+        ret, img1 = cam1.read()
+        imgbytes1 = cv2.imencode(".png", img1)[1].tobytes()
+        window["-IMAGE1-"].update(data=imgbytes1)
 
     window.close()
-
-
 main()
