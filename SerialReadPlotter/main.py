@@ -26,6 +26,9 @@ yList2 = []
 yList3 = []
 yList4 = []
 myValnew = [0.00] * 4
+plotData = 0
+status = 0
+
 
 def scanSerial():
     listB.delete(0, 10)
@@ -42,6 +45,9 @@ def scanSerial():
 def connectSerial():
     global ser
     global selectedPort
+    global plotData
+    global status
+    global ani
     for i in listB.curselection():
         selectedItem = listB.get(i)
         selectedPort = selectedItem[3]
@@ -53,63 +59,68 @@ def connectSerial():
         9600,
         timeout=0.05
     )
-    root.after(100, Thread(target=readSerial).start)
+    status = 1
+
+    myplot = FigureCanvasTkAgg(figure, canvas)
+    toolbar = NavigationToolbar2Tk(myplot, canvas)
+    toolbar.update()
+    myplot.draw()
+    myplot.get_tk_widget().pack(side=TOP, fill=BOTH, expand=1)
+    ani = animation.FuncAnimation(figure, animate, interval=1000)
 
 
-def readSerial():
-    global ser
-    global enu
-    global df1
+#     root.after(100, Thread(target=readSerial).start)
+#
+#
+# def readSerial():
+#     global enu
+#     global myValnew
+#     global ani
+#     myVal = ser.readline()
+#     enu = 1 + enu
+#     myVal = str(myVal)
+#     myVal = myVal.replace('\\r\\n', "")
+#     myVal = myVal.replace('b', "")
+#     myVal = myVal.replace('\'', "")
+#     myValnew = myVal.split(',')
+#     try:
+#         print(myValnew[0], myValnew[1], myValnew[2], myValnew[3])
+#
+#     except:
+#         pass
+#
+#     Tvalu.config(text=myVal)
+#     root.after(1000, Thread(target=readSerial).start)
+
+
+def animate(i):
     global myValnew
     myVal = ser.readline()
-    enu = 1 + enu
     myVal = str(myVal)
     myVal = myVal.replace('\\r\\n', "")
     myVal = myVal.replace('b', "")
     myVal = myVal.replace('\'', "")
     myValnew = myVal.split(',')
     try:
-        print(myValnew[0], myValnew[1], myValnew[2], myValnew[3])
+        xList.append(next(index))
+        yList1.append(int(myValnew[0]))
+        yList2.append(int(myValnew[1]))
+        yList3.append(int(myValnew[2]))
+        yList4.append(int(myValnew[3]))
+        print(i, int(myValnew[0]), int(myValnew[1]), int(myValnew[2]), int(myValnew[3]))
+        Tvalu.config(text=myVal)
 
-        xList.append(enu)
-        yList1.append(myValnew[0])
-
-        a.plot(xList, yList1)
+        a.plot(xList, yList1, color='orange')
 
     except:
         pass
-
-    # print(enu, myValnew, len((myValnew)))
-    Tvalu.config(text=myVal)
-    root.after(200, Thread(target=readSerial).start)
-
-figure = Figure(figsize=(6.63, 2.5), dpi=100)
-x = numpy.arange(-5, 5, .01)
-a = figure.add_subplot(111)
-
-def animate(i):
-    xList.append(next(index))
-    yList1.append(random.randint(0, 5))
-    yList2.append(random.randint(0, 5))
-    yList3.append(random.randint(0, 5))
-    yList4.append(random.randint(0, 5))
-
-    a.plot(xList, yList1)
-    a.plot(xList, yList2)
-    a.plot(xList, yList3)
-    a.plot(xList, yList4)
 
 
 F1 = Frame(root, height=h, width=w, bg='#5C6592')
 listB = Listbox(F1, width=50, height=3)
 canvas = Canvas(F1, height=310, width=655, bg='#ffffff')
 
-myplot = FigureCanvasTkAgg(figure, canvas)
-toolbar = NavigationToolbar2Tk(myplot, canvas)
-toolbar.update()
-myplot.draw()
-
-TconsValue = Label(F1,text="nilai:", font=("Arial", 32), bg='#5C6592', fg='#ffffff')
+TconsValue = Label(F1, text="nilai:", font=("Arial", 32), bg='#5C6592', fg='#ffffff')
 Tvalu = Label(F1, font=("Arial", 32), bg='#5C6592', fg='#ffffff')
 
 Bscan = Button(F1, text="Scan", width=6, height=1, command=scanSerial)
@@ -123,7 +134,8 @@ Tvalu.place(y=130, x=150)
 listB.place(y=20, x=20)
 
 canvas.place(y=200, x=20)
-myplot.get_tk_widget().pack(side=TOP, fill=BOTH, expand=1)
 
-ani = animation.FuncAnimation(figure, animate, interval=1000)
+figure = Figure(figsize=(6.63, 2.5), dpi=100)
+a = figure.add_subplot(111)
+
 root.mainloop()
