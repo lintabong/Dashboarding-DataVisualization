@@ -15,7 +15,6 @@ byte colPins[COLS] = {10, 11, 12};
 
 Keypad customKeypad = Keypad( makeKeymap(hexaKeys), rowPins, colPins, ROWS, COLS);
 
-//int relay = 5;
 int led1 = 3;
 int led2 = 4;
 int led3 = 5;
@@ -31,7 +30,6 @@ void setup() {
   Serial.begin(115200);
   Serial.setTimeout(1);
 
-//  pinMode(relay, OUTPUT);
   pinMode(led1, OUTPUT);
   pinMode(led2, OUTPUT);
   pinMode(led3, OUTPUT);
