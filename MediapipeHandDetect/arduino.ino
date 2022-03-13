@@ -56,10 +56,8 @@ void loop() {
       inputN = 0;
       lcd.clear();
     }
-
   }
   
-
   lcd.setCursor(15,0);
   lcd.print(inputN);
 
