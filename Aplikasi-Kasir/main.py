@@ -24,11 +24,13 @@ def printValue():
     getName     = inName.get()
     getPhone    = inPhone.get()
     getAddress  = inAddress.get()
-    if getAddress:
-        print("ada")
-    else:
-        print("kosong")
     time_utc    = strftime("%I:%M:%S") + " " + strftime("%a, %b %d, %Y")
+
+    numrow      = 32
+    cutAddress  = ""
+    rowPrint    = int(len(getAddress) / numrow)
+    divider     = 0
+
     print("--------------------------------")
     print(str(time_utc))
     print(" ")
@@ -36,7 +38,21 @@ def printValue():
     print("No. HP   : 082221398970")
     print("================================")
     print(getName, getPhone)
-    print(getAddress)
+
+    if len(getAddress) >= numrow:
+        for u in range(rowPrint + 1):
+            divider = divider + numrow
+
+            if divider <= rowPrint * numrow:
+                for i in range(divider - numrow, divider):
+                    cutAddress = cutAddress + getAddress[i]
+
+            else:
+                for i in range(divider - numrow, len(getAddress)):
+                    cutAddress = cutAddress + getAddress[i]
+
+            print(cutAddress)
+            cutAddress = ""
     print("--------------------------------")
 
 
