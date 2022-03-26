@@ -9,5 +9,5 @@
 ### 1. [VGA Data Logger](https://github.com/lintabong/Python-Dashboarding/tree/main/VGAscale)
 <p>referring to the license, I only display the gui only</p>
 
-![img](https://github.com/lintabong/Python-Dashboarding/blob/main/VGAscale/vga-datalogger.png)
+![img](https://github.com/lintabong/Python-Dashboarding/blob/main/VGAscale/datalogger.png)
 =====
