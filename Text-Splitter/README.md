@@ -8,3 +8,5 @@ line 2: t, consectetur adipiscing<br>
 line 3:  elit, sed do eiusmod tem<br>
 line 4: por incididunt ut labore <br>
 line 5: et dolore magna aliqua. <br>
+
+[img](https://github.com/lintabong/Dashboarding-and-Data-Visualization/blob/main/Text-Splitter/textsplitter.png)
