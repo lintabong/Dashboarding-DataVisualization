@@ -6,14 +6,14 @@ import pyrebase
 import time
 
 firebaseConfig = {
-    'apiKey': "AIzaSyAv5O3a4Wt64YcooVCdT6yk75qXsviyqBU",
-    'authDomain': "kasirdb-20f3a.firebaseapp.com",
-    'databaseURL': "https://kasirdb-20f3a-default-rtdb.firebaseio.com",
-    'projectId': "kasirdb-20f3a",
-    'storageBucket': "kasirdb-20f3a.appspot.com",
-    'messagingSenderId': "137442340922",
-    'appId': "1:137442340922:web:ac584917901a8a28e4c503",
-    'measurementId': "G-B61S8KWQF0"
+    'apiKey': "*******YcooVCdT6yk75qXsviyqBU",
+    'authDomain': "*******-20f3a.firebaseapp.com",
+    'databaseURL': "https://*******-20f3a-default-rtdb.firebaseio.com",
+    'projectId': "*******-20f3a",
+    'storageBucket': "*******-20f3a.appspot.com",
+    'messagingSenderId': "*******2340922",
+    'appId': "*******28e4c503",
+    'measurementId': "*******8KWQF0"
 }
 
 firebase    = pyrebase.initialize_app(firebaseConfig)
