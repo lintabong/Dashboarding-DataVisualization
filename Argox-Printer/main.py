@@ -13,7 +13,6 @@ serP = serial.Serial(
     timeout=0.05
 )
 
-
 while True:
     data = ser.readline()
     strData = str(data)
@@ -24,7 +23,6 @@ while True:
     strData = strData.replace('+', "")
     strData = strData.replace('b', "")
     strData = strData.replace(' ', "")
-
 
     # print(data)
     if strData != '':
