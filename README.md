@@ -1,7 +1,7 @@
 # Simple Dashboarding
 
 ### 1. [Aplikasi Kasir](https://github.com/lintabong/Python-Dashboarding/tree/main/Aplikasi-Kasir)
-<p>Fitur sementara: Print resi</p> 
+<p>Feature: receipt print, crud firebase</p> 
 
 ![img](https://github.com/lintabong/Python-Dashboarding/blob/main/Aplikasi-Kasir/kasir.png)
 =====
