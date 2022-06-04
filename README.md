@@ -7,12 +7,13 @@
 =====
 
 ### 2. [VGA Data Logger](https://github.com/lintabong/Python-Dashboarding/tree/main/VGAscale)
-<p>referring to the license, I only display the GUI only.</p>
+<p>Referring to the license, I only display the GUI only.</p>
 
 ![img](https://github.com/lintabong/Python-Dashboarding/blob/main/VGAscale/datalogger.png)
 =====
 
 ### 3. [Create a Distance Matrix from Known Coordinat](https://github.com/lintabong/Dashboarding-and-Data-Visualization/tree/main/Matrix-Distance-From-LatLon)
-<p>.</p>
+<p>From the already known longitudes and lattitudes, we create a program to calculate the distance from each point and plot it in the form of a distance matrix</p>
 
+![img](https://github.com/lintabong/Dashboarding-and-Data-Visualization/blob/main/Matrix-Distance-From-LatLon/excel.png)
 =====
