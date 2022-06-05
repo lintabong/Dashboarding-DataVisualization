@@ -13,7 +13,7 @@
 =====
 
 ### 3. [Create a Distance Matrix from Known Coordinat](https://github.com/lintabong/Dashboarding-and-Data-Visualization/tree/main/Matrix-Distance-From-LatLon)
-<p>From the already known longitudes and lattitudes, we create a program to calculate the distance from each point and plot it in the form of a distance matrix</p>
+<p>From the already known longitudes and lattitudes, we created a program to calculate the distance from each point (lat lon) and plot it in the form of a distance matrix</p>
 
 ![img](https://github.com/lintabong/Dashboarding-and-Data-Visualization/blob/main/Matrix-Distance-From-LatLon/excel.png)
 =====
