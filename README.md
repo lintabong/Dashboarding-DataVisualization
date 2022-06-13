@@ -19,7 +19,7 @@
 =====
 
 ### 4. [Image Processing GUI](https://github.com/lintabong/Data-Visualization/tree/main/ImageProcessing-GUI)
-<p></p>
+<p>This GUI shows image from webcam PC and realtime process it</p>
 
 ![img](https://github.com/lintabong/Data-Visualization/blob/main/ImageProcessing-GUI/image-processing.png)
 =====
