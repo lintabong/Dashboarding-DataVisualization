@@ -1,0 +1,6 @@
+String Time[]       = {"13:33:59","13:34:03","13:34:06","13:34:10","13:34:14","13:34:18","13:34:21","13:34:28","13:34:30","13:34:35","13:34:40","13:34:45","13:34:50","13:34:55","13:35:00","13:35:05","13:35:10","13:35:15","13:35:20","13:35:25"};
+int    Api[]        = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+float  Suhu[]       = {26.90,26.80,26.90,26.90,26.80,26.80,26.80,26.80,26.80,26.80,26.80,26.80,26.80,26.80,26.80,26.80,26.80,26.80,26.80,26.80};
+float  Kelembaban[] = {72,72,72,72,72,72,72,72,72,72,72,71,72,72,71,71,71,72,72,73};
+float  PPM[]        = {50.14,50.89,49.77,51.64,54.34,47.57,49.48,46.15,57.53,54.73,48.30,49.77,49.77,55.13,57.13,55.92,47.57,48.30,43.37,55.13};
+String Label[]      = {"Tidak Kebakaran","Tidak Kebakaran","Tidak Kebakaran","Tidak Kebakaran","Tidak Kebakaran","Tidak Kebakaran","Tidak Kebakaran","Tidak Kebakaran","Tidak Kebakaran","Tidak Kebakaran","Tidak Kebakaran","Tidak Kebakaran","Tidak Kebakaran","Tidak Kebakaran","Tidak Kebakaran","Tidak Kebakaran","Tidak Kebakaran","Tidak Kebakaran","Tidak Kebakaran","Tidak Kebakaran"};
