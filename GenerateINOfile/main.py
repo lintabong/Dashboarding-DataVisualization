@@ -3,7 +3,7 @@ from csv import reader
 datasetcsv = 'dataset.csv'
 datasettxt = 'dataset.txt'
 
-datatype = ['String', 'int', 'float', 'float', 'float', 'String']
+datatype = ['String', 'int', 'double', 'float', 'float', 'String']
 
 numrow      = 20
 writestring = ''
