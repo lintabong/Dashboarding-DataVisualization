@@ -5,7 +5,7 @@ datasettxt = 'dataset.txt'
 
 datatype = ['String', 'int', 'double', 'float', 'float', 'String']
 
-numrow      = 20
+numrow      = 20 # num of lines
 writestring = ''
 
 for index in range(6):
