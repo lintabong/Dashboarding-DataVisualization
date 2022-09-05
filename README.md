@@ -1,7 +1,7 @@
 # Dashboarding & Data Visualization
 
 ### 1. [Aplikasi Kasir](https://github.com/lintabong/Python-Dashboarding/tree/main/Aplikasi-Kasir)
-<p>Feature : receipt print, crud firebase. this code are free</p> 
+<p>I have creating a POS application using python and other momdules which is can do CRUD operations into Firebase Realtime Database noSQL, also can connect to thermal printer</p>
 
 ![img](https://github.com/lintabong/Python-Dashboarding/blob/main/Aplikasi-Kasir/kasir.png)
 =====
